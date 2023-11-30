@@ -1,0 +1,143 @@
+/* styles.css */
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2d2d2d;
+    
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  /* Center content horizontally and vertically */
+  .boarder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 2px solid #007bff; /* Blue border */
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #000000;
+  }
+  
+  /* Header styles */
+  .heading {
+    font-size: 2.5rem;
+    color: #007bff; /* Blue color */
+    margin-bottom: 20px;
+  }
+  
+  /* Dropdown styles */
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #fbfbfb; /* Add border */
+
+    border-radius: 4px;
+    padding: 10px;
+    padding-left: 110.5px;
+    padding-right: 110.5px;
+  }
+  
+  .dropdown p {
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .dropdown-content {
+    position: relative;
+    
+  }
+  
+  #countryInput {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .suggestions {
+    position: absolute;
+    width: 200px;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #c3c3c3;
+    border: 1px solid #f7f7f7;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(9, 8, 8, 0.2);
+    
+  }
+  
+  .suggestions div {
+    padding: 8px;
+    cursor: pointer;
+    
+  }
+  
+  .suggestions div:hover {
+    background-color: #a6acae;
+  }
+  
+  /* Countries styles */
+  .countries {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #8c8b8b; /* Add border */
+    border-radius: 4px;
+    padding: 10px;
+
+  }
+  
+  .countries p {
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .number {
+    width: 150px;
+    color: #a6acae;
+  }
+  
+  #totalcountry {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Button styles */
+  #submitButton {
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    background-color: #007bff; /* Blue color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #submitButton:hover {
+    background-color: #2315a7; /* Darker blue color on hover */
+  }
+  
+.invalid-input {
+    border: 5px solid red;
+}
+  

@@ -1,0 +1,27 @@
+{
+  "name": "fun",
+  "version": "1.0.0",
+  "main": "index1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel ./src/index1.html "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@gltf-transform/core": "^3.5.0",
+    "@gltf-transform/extensions": "^3.5.0",
+    "@gltf-transform/functions": "^3.5.0",
+    "@turf/turf": "^6.5.0",
+    "simplify-geojson": "^1.0.5",
+    "three": "^0.155.0",
+    "tween.js": "^16.6.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-json": "^2.9.3",
+    "@types/tween.js": "^18.6.1",
+    "process": "^0.11.10"
+  },
+  "description": ""
+}

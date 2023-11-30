@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cool Interactive Map</title>
+  <!-- Include Leaflet CSS and JavaScript files -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+  <!-- Add CSS for the map container -->
+  <style>
+    #map {
+      height: 500px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Map container -->
+  <div id="map"></div>
+
+  <script>
+    // Function to initialize the map
+    function initializeMap() {
+      // Create a map instance and set the initial view
+      const map = L.map('map').setView([0, 0], 2);
+
+      // Add a map tile layer from OpenStreetMap
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+
+      // Function to handle mouseover event on country layer
+      function highlightFeature(e) {
+        const layer = e.target;
+        layer.setStyle({
+          weight: 2,
+          color: '#666',
+          dashArray: '',
+          fillOpacity: 0.7
+        });
+        
+        if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+          layer.bringToFront();
+        }
+      }
+
+      // Function to reset country layer style on mouseout
+      function resetHighlight(e) {
+        geojson.resetStyle(e.target);
+      }
+
+      // Function to display country name on hover
+      function showCountryName(e) {
+        const countryName = e.target.feature.properties.name;
+        // Do something with the country name, such as displaying it in a tooltip or popup
+        // For example, you can use Leaflet's tooltip to display the country name on hover:
+        e.target.bindTooltip(countryName, { permanent: true, direction: "center" }).openTooltip();
+      }
+
+      // GeoJSON data for country boundaries (Replace with your own GeoJSON data)
+      const countriesData = { ... };
+
+      // Create a GeoJSON layer and add it to the map
+      const geojson = L.geoJSON(countriesData, {
+        style: function (feature) {
+          return {
+            fillColor: '#f0f0f0',
+            weight: 1,
+            opacity: 1,
+            color: 'white',
+            fillOpacity: 0.7
+          };
+        },
+        onEachFeature: function (feature, layer) {
+          layer.on({
+            mouseover: highlightFeature,
+            mouseout: resetHighlight,
+            mousemove: showCountryName,
+          });
+        }
+      }).addTo(map);
+    }
+
+    // Call the function to initialize the map when the page loads
+    document.addEventListener("DOMContentLoaded", initializeMap);
+  </script>
+</body>
+</html>

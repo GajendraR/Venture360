@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cartoon Airplane
+* source:	https://sketchfab.com/3d-models/cartoon-airplane-5d92244ad9db4af197853a1376cbe0c9
+* author:	Nikita Mikhniuk (https://sketchfab.com/n7sr2rb)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cartoon Airplane" (https://sketchfab.com/3d-models/cartoon-airplane-5d92244ad9db4af197853a1376cbe0c9) by Nikita Mikhniuk (https://sketchfab.com/n7sr2rb) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

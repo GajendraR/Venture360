@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3D Canvas Space</title>
+    <!-- Include Three.js library -->
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+
+    <!-- Define the import map for Three.js and its addons -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.132.2/build/three.module.js",
+          "three/addons/controls/OrbitControls.js": "https://unpkg.com/three@0.132.2/examples/jsm/controls/OrbitControls.js",
+          "three/addons/loaders/GLTFLoader.js": "https://unpkg.com/three@0.132.2/examples/jsm/loaders/GLTFLoader.js"
+        }
+      }
+    </script>
+
+    
+    <style>
+        /* Set a fixed height for the canvas container to create constant space */
+        #canvas-container {
+          height: 500px;
+          position: relative;
+        }
+    
+        /* Style for the country name element */
+        
+      .country-name {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 16px;
+      pointer-events: none;
+      white-space: nowrap; /* Prevent line breaks in the country name */
+    }
+
+    body {
+  background: #000000;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 48%;
+}
+
+.line {
+  animation: expand 1s ease-in-out infinite;
+  border-radius: 10px;
+  display: inline-block;
+  transform-origin: center center;
+  margin: 0 3px;
+  width: 1px;
+  height: 25px;
+}
+
+.line:nth-child(1) {
+  background: #27ae60;
+}
+
+.line:nth-child(2) {
+  animation-delay: 180ms;
+  background: #f1c40f;
+}
+
+.line:nth-child(3) {
+  animation-delay: 360ms;
+  background: #e67e22;
+}
+
+.line:nth-child(4) {
+  animation-delay: 540ms;
+  background: #2980b9;
+}
+
+@keyframes expand {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(2);
+  }
+  50% {
+    transform: scale(3);
+  }
+}
+    
+    
+</style>
+    
+</head>
+
+  <div class="loader">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+
+    <!-- Create a div container to hold the 3D canvas -->
+   
+    <button id="startButton">Start Animation</button>
+    <div id="canvas-container">
+       
+    </div>
+    <div id="countryNameElement" class="country-name"></div>
+
+
+    <script src="3d_script.js" type="module"></script>
+</body>
+</html>
